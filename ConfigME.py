@@ -29,6 +29,7 @@ import urllib.request as urlr
 
 import dill as pickle
 import numpy as np
+from pathlib import PosixPath, Path
 
 class Config():
     """
@@ -775,7 +776,7 @@ class Config():
         return successlist
 
     def _checkdir(self, directory:str) -> bool:
-        if type(directory)==str:
+        if type(directory) in [str, PosixPath, Path]:
             try:
                 os.makedirs(directory, exist_ok=True)
                 return True
