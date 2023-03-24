@@ -10,7 +10,7 @@ Another key feature of this class are the parsing methods which go through your 
 By using this, writing config-files is extremely easy as even arguments of imported modules are queried and automatically written into your files!
 Have fun!
 '''
-
+from __future__ import annotations
 import os
 import platform
 import sys
@@ -192,7 +192,7 @@ class Config():
         pass
     
     @classmethod
-    def LOAD(cls, file:str, linuxify:bool=True): ### TODO: TYPING
+    def LOAD(cls, file:str, linuxify:bool=True) -> Config: ### TODO: TYPING
         """
         Parameters
         ----------
