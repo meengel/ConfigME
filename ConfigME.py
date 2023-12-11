@@ -721,10 +721,10 @@ class Config():
         return uniquename
         
     def makeME_uniquelist(self, listl:list) -> list:
-        return list(dict.fromkeys(listl))
+        return list(set(listl))
     
     def countME_uniquelist(self,listl:list) -> int:
-        return len(dict.fromkeys(listl))
+        return len(set(listl))
     
     #%% python builtins
     def __getitem__(self,key):
